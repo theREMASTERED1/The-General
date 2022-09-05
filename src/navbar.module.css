@@ -1,0 +1,108 @@
+.navBar {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(223, 223, 223);
+  display: flex;
+  box-shadow: 3px 0px 10px #888888;
+  top: 0;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+}
+.burgerBox {
+  width: 100%;
+  height: 100%;
+}
+.contain {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 30;
+}
+.hamburger {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  padding-top: 30px;
+  background-color: rgb(207, 205, 205);
+  padding-bottom: 30px;
+  width: 100%;
+  box-shadow: 0px 4px 4px #888888;
+}
+.navList {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(207, 205, 205);
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 3px 0px 10px #888888;
+}
+.navListRow {
+  width: 100%;
+  height: fit-content;
+  margin-top: 20px;
+  margin-bottom: w0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+.navListRow p {
+  text-decoration: none;
+  color: black;
+}
+.navList1 {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(207, 205, 205);
+  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+.navListRow:hover {
+  background-color: #888888;
+  color: white;
+  transition: 1s;
+}
+@media screen and (min-width: 500px) {
+  .contain {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .contain {
+    width: 15%;
+    height: 100vh;
+    position: relative;
+  }
+  .navBar {
+    height: 100%;
+  }
+  .hamburger {
+    display: none;
+  }
+  .navList1 {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(88, 88, 88);
+  }
+  .navListRow {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgb(223, 223, 223);
+  }
+}

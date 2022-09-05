@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  grid-row: 1/3;
+  grid-column: ;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainPage {
+  margin-top: 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(216, 216, 252);
 }
+.heading {
+  width: 100%;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-size: 30px;
+}
+.heading h1 {
+  font-size: 60px;
+  font-family: "Playfair Display SC", serif;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.heading p {
+  margin-bottom: 20px;
+}
+.vl {
+  border-left: 3px solid black;
+  height: 180px;
+  background-color: black;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+.mainText {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textbox {
+  width: 70%;
+  text-align: center;
+  background-color: rgba(105, 105, 105, 0.8);
+  padding: 15px;
+  border-radius: 15px;
   color: white;
+  font-size: 20px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+  width: 90%;
+  height: 100%;
 }

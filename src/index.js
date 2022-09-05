@@ -1,13 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Profile from "./profilePage/profile";
+import Navbar from "./navbar";
+import Surprise from "./surprisePage/surprise";
+import News from "./newsPage/news";
+import Weather from "./weatherPage/weather";
+import NewsData from "./newsPage/newsData";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/profilePage/profile" element={<Profile />} />
+        <Route path="/navbar" element={<Navbar />} />
+        <Route path="/surprisePage/surprise" element={<Surprise />} />
+        <Route path="/newsPage/news" element={<News />} />
+        <Route path="/weatherPage/weather" element={<Weather />} />
+        <Route path="/newsPage/newsData" element={<NewsData />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -1,0 +1,100 @@
+.profile {
+  width: 60%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.contain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  justify-content: center;
+}
+.profileForm {
+  width: 80%;
+  background-color: rgb(99, 99, 99);
+  border-radius: 20px;
+  color: white;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  display: flex;
+  flex-direction: row;
+  padding-right: 10px;
+  box-shadow: 0px 8px 15px 8px #888888;
+  margin-left: 10px;
+}
+.formTxt {
+  width: 30%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-right: 20px;
+}
+
+.formHead {
+  font-size: 40px;
+  width: 100%;
+
+  font-family: fantasy;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.formSub {
+  width: 80%;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+.inputBox {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  margin-top: 10px;
+  font-size: 20px;
+}
+.input {
+  width: 80%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+.msgInput {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+.submit {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: fit-content;
+}
+
+.SubButton {
+  font-size: 20px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
