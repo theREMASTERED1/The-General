@@ -1,0 +1,51 @@
+.sideBar {
+  background-color: rgb(0, 7, 61);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  text-align: center;
+  margin-right: 2px;
+}
+
+.links {
+  width: 100%;
+  height: fit-content;
+  padding-top: 60px;
+  overflow: hidden;
+}
+.navListRow {
+  width: 100%;
+  height: fit-content;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+}
+.navListRow:hover {
+  background-color: white;
+  color: rgb(0, 7, 61);
+  padding-left: 3px;
+  transition: 0.8s;
+}
+.navListRow i {
+  margin-right: 5px;
+}
+.heading {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
+}
+.burger {
+  width: 100%;
+  justify-content: right;
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  height: fit-content;
+  display: flex;
+}
+.burger i {
+  margin-right: 12px;
+}
