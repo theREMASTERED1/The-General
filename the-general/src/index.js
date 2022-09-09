@@ -10,6 +10,7 @@ import Surprise from "./surprisePage/surprise";
 import News from "./newsPage/news";
 import Weather from "./weatherPage/weather";
 import NewsData from "./newsPage/newsData";
+import Game from "./gamePage/game";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,6 +23,7 @@ root.render(
       <Route path="/newsPage/news" element={<News />} />
       <Route path="/weatherPage/weather" element={<Weather />} />
       <Route path="/newsPage/newsData" element={<NewsData />} />
+      <Route path="/gamePage/game" element={<Game />} />
     </Routes>
   </BrowserRouter>
 );

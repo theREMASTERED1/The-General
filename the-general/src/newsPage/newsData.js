@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./newsData.module.css";
+import { motion } from "framer-motion";
 let apiKey = "8e333552269e45ab9324f5ddb62f383d";
 
 export default function NewsData() {
@@ -19,22 +20,24 @@ export default function NewsData() {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.search} id="searchForm">
-          <label>NEWS</label>
-          <input
-            className={styles.input1}
-            id="input1"
-            onChange={(e) => setTopic(e.target.value)}
-            placeholder="Search for news.."
-          />
-          <button className={styles.submit} onClick={handleSubmit}>
-            search
-          </button>
+        <div className={styles.topBox}>
+          <div className={styles.search} id="searchForm">
+            <label>NEWS</label>
+            <input
+              className={styles.input1}
+              id="input1"
+              onChange={(e) => setTopic(e.target.value)}
+              placeholder="Search for news.."
+            />
+            <button className={styles.submit} onClick={handleSubmit}>
+              search
+            </button>
+          </div>
         </div>
 
         <div className={styles.cards}>
           {newsInput?.map((news) => (
-            <div className={styles.newsCard} id="card" key={news.id}>
+            <motion.div className={styles.newsCard} id="card" key={news.id}>
               <img src={news.urlToImage} className={styles.image} />
               <div className={styles.txt}>
                 <div className={styles.head} style={{ textDecoration: "none" }}>
@@ -45,7 +48,7 @@ export default function NewsData() {
                 <div className={styles.source}>{news.source.name}</div>
                 <div className={styles.info}>{news.description}</div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./navbar";
 import Profile from "./profilePage/profile";
+import Weather from "./weatherPage/weather";
+import WeatherWidget from "./components/weatherWidget";
 
 function App() {
   return (
@@ -19,11 +21,14 @@ function App() {
               Welcome,We hope you enjoy you visit and become a regular visitor
               <br />
               Here you can view the latest news reports,weather report and the
-              whole shebang! use the navbar on the left to find you way around
+              whole sebang! use the navbar on the left to find you way around
             </div>
           </div>
         </div>
-        <Profile className="profile" />
+        <div className="bottom">
+          <Profile className="profile" />
+          <WeatherWidget />
+        </div>
       </div>
     </div>
   );

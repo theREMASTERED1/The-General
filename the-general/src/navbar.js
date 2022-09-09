@@ -15,6 +15,11 @@ import {
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [turn, setTurn] = useState(false);
+
+  const buttonTurn = () => {
+    document.getElementById("arrow").style.transform = "rotate(180deg)";
+  };
 
   const toggle = () => {
     setOpen(!open);
@@ -28,7 +33,13 @@ export default function Navbar() {
       >
         <div className={styles.burger}>
           <div onClick={toggle}>
-            <i class="fa-solid fa-bars fa-2xl" id="burger"></i>
+            <motion.i
+              animate={{
+                transform: open ? "rotate(180deg)" : "rotate(0deg)",
+              }}
+              class="fa-solid fa-circle-chevron-right fa-2xl"
+              id="arrow"
+            ></motion.i>
           </div>
         </div>
         <div className={styles.links}>
@@ -48,7 +59,7 @@ export default function Navbar() {
               <i className="fa-solid fa-cloud"></i> {open && "Weather"}
             </div>
           </Link>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/gamePage/game" style={{ textDecoration: "none" }}>
             <div className={styles.navListRow}>
               <i className="fa-solid fa-gamepad"></i> {open && "Game"}
             </div>

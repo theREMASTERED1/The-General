@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import styles from "./weather.module.css";
+import styles from "./weatherWidget.module.css";
 import Navbar from "../navbar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Weather() {
+export default function WeatherWidget() {
   const api = {
     key: "a841af18862204435bad2b5345bbfd26",
     base: "https://api.openweathermap.org/data/2.5/",
@@ -28,35 +27,16 @@ export default function Weather() {
 
   return (
     <div className={styles.main}>
-      <Navbar />
       <div className={styles.contain}>
-        <div className={styles.background}>
-          <div className={styles.x1}>
-            <div className={styles.cloud}></div>
-          </div>
-          <div className={styles.x2}>
-            <div className={styles.cloud}></div>
-          </div>
-          <div className={styles.x3}>
-            <div className={styles.cloud}></div>
-          </div>
-          <div className={styles.x4}>
-            <div className={styles.cloud}></div>
-          </div>
-          <div className={styles.x5}>
-            <div className={styles.cloud}></div>
-          </div>
-        </div>
         <header className={styles.head}>
+          <h1>Weather</h1>
           <div className={styles.submit}>
             <input
               type="text"
               placeholder="Enter city/town..."
               onChange={(e) => setSearch(e.target.value)}
             />
-            <button onClick={searchPressed}>
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+            <button onClick={searchPressed}>Search</button>
           </div>
           {typeof weather.main !== "undefined" ? (
             <div className={styles.list}>

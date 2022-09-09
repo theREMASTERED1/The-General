@@ -1,0 +1,30 @@
+.mainBox {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.gameBox {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.board {
+  width: 50%;
+  height: 90%;
+  display: grid;
+  background-color: rgba(131, 131, 131, 0.8);
+  grid-template-rows: repeat(21, 1fr);
+  grid-template-columns: repeat(21, 1fr);
+}
+.snake {
+  background-color: hsl(200, 100%, 50%);
+  background: blue;
+  border: 0.25px solid black;
+}
+
+.food {
+  background-color: hsl(50, 100%, 50%);
+}
