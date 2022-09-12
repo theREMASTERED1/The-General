@@ -13,6 +13,8 @@ import {
   icon,
 } from "@fortawesome/fontawesome-svg-core/import.macro";
 
+window.onload = function reloadPage() {};
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [turn, setTurn] = useState(false);
@@ -66,7 +68,10 @@ export default function Navbar() {
           </Link>
         </div>
         {open && (
-          <div className={styles.heading}>
+          <div
+            className={styles.heading}
+            onChange={() => window.location.reload()}
+          >
             <p>THE</p>
             <h1>GENERAL</h1>
           </div>
